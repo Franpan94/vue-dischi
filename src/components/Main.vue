@@ -1,7 +1,7 @@
 <template>
     <main class="ms_bg">
-        <div class="container">
-             <Listcard />
+        <div class="container pt-8 pb-8">
+            <Listcard />
         </div>
     </main>
 </template>
@@ -19,6 +19,14 @@ export default {
 <style lang="scss" scoped>
 .ms_bg{
     background-color: rgb(38, 51, 64);
-    height: 90vh;
+    height: 100%;
+}
+
+.pt-8{
+    padding-top: 80px;
+}
+
+.pb-8{
+    padding-bottom: 80px;
 }
 </style>
