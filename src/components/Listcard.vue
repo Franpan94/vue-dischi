@@ -1,7 +1,8 @@
 <template>
-  <div>
-    Listcard
-    <Card />
+  <div class="row">
+    <div class="col-12">
+      <Card />
+    </div>
   </div>
 </template>
 
@@ -17,4 +18,6 @@ export default {
 </script>
 
 <style lang="scss">
+
+
 </style>

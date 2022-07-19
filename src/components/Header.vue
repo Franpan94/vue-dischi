@@ -1,6 +1,6 @@
 <template>
-    <header class="text-center">
-        header
+    <header class="ms_bg">
+        <i class="bi bi-spotify"></i>
     </header>
 </template>
 
@@ -10,6 +10,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.ms_bg{
+    background-color: rgb(46, 58, 70);
+    height: 10vh;
+}
 </style>
