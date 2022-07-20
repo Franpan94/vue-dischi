@@ -1,6 +1,6 @@
 <template>
     <main class="ms_bg">
-        <div class="container pt-8 pb-8">
+        <div class="container pt-5 pb-8">
             <Listcard />
         </div>
     </main>
@@ -22,8 +22,8 @@ export default {
     height: 100%;
 }
 
-.pt-8{
-    padding-top: 80px;
+.pt-5{
+    padding-top: 50px;
 }
 
 .pb-8{
