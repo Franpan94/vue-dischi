@@ -1,6 +1,6 @@
 <template>
   
-    <option v-model="card.genre" @click="$emit('select', card.genre)"
+    <option  @click="$emit('select', searchoption)"
       >{{ card.genre }}
     </option>
    
@@ -15,7 +15,7 @@ export default {
    props: ["card"],
    data: function(){
     return{
-  
+       searchoption: '',
     }
   }
 }

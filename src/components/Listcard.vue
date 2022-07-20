@@ -1,9 +1,11 @@
 <template>
   <section>
     <div class="pb-5">
-      <select ><Selectbar v-for="card in cards" 
-      :key="card.id" :card="card" 
-      @select = "selectcard"/></select>
+      <select v-model="searchoption">
+        <option v-for="generi in generis" :key="generi.id" @click="selectchcard(searchoption)">
+          {{generi.genre}}
+        </option>
+      </select>
     </div>
     <div class="row ">
       <Card v-for="card in cards" :key="card.id" :card="card" class="col-3" />
@@ -20,8 +22,10 @@ export default {
   name: "MainListard",
   data: function () {
     return {
+      searchoption: '',
       cards: [],
-      filtercards:[],
+      filtergeneris:[],
+      generis: [],
     };
   },
 
@@ -36,12 +40,16 @@ export default {
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then((response) => {
           this.cards = response.data.response;
+          this.generis = response.data.response;
           
+          for(let i=0 ; i < this.generis.length; i++){
+             console.log(this.generis[i].genre);
+          }
         });
     },
 
     selectchcard(opt){
-      this.filtercards = this.cards.filter( (card) => card.genre.includes(opt))
+      this.filtergeneris = this.generis.filter( (generi) => generi.genre.includes(opt))
     }
   },
 
