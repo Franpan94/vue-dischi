@@ -1,6 +1,6 @@
 <template>
     <header class="ms_bg">
-        <i class="bi bi-spotify"></i>
+        
     </header>
 </template>
 

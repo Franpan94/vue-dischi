@@ -1,5 +1,6 @@
 <template>
   <div class="row ">
+    <Selectbar />
     <Card v-for="card in cards" :key="card.id" :card="card" class="col-3" />
   </div>
 </template>
@@ -7,6 +8,7 @@
 <script>
 import axios from "axios";
 import Card from "./Card.vue";
+import Selectbar from "./Selectbar.vue";
 
 export default {
   name: "MainListard",
@@ -18,6 +20,7 @@ export default {
 
   components: {
     Card,
+    Selectbar
   },
 
   methods: {
