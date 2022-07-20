@@ -3,7 +3,7 @@
     <div class="pb-5">
       <select ><Selectbar v-for="card in cards" 
       :key="card.id" :card="card" 
-      @search = "searchcard"/></select>
+      @select = "selectcard"/></select>
     </div>
     <div class="row ">
       <Card v-for="card in cards" :key="card.id" :card="card" class="col-3" />
@@ -36,11 +36,11 @@ export default {
         .get("https://flynn.boolean.careers/exercises/api/array/music")
         .then((response) => {
           this.cards = response.data.response;
-          this.filtercards = this.cards;
+          
         });
     },
 
-    searchcard(opt){
+    selectchcard(opt){
       this.filtercards = this.cards.filter( (card) => card.genre.includes(opt))
     }
   },
