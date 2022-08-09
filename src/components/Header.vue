@@ -4,8 +4,9 @@
             <h2>Vue Dischi</h2>
         </div>
         <div class="col-6">
-            <select v-model="selectgenre" >
-              <option  v-for="(generdisc, i) in generdiscs" :key="i" :value="generdisc.toLowerCase()" @click="changenre(selectgenre)">{{generdisc}}</option>
+            <select v-model="selectgenre" @click="changenre(selectgenre)">
+                <option value="">Tutti i generi</option>
+                <option  v-for="(generdisc, i) in generdiscs" :key="i" :value="generdisc.toLowerCase()">{{generdisc}}</option>
             </select>
         </div>
     </header>

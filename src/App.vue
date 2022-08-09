@@ -27,8 +27,6 @@ export default {
       axios.get(this.api).then((result) => {
         this.discs = result.data.response;
         this.filterdiscs = result.data.response;
-        console.log(this.discs);
-        console.warn(this.getgenre(this.discs));
         this.generdiscs = this.getgenre(this.discs);
       })
     },
@@ -44,8 +42,13 @@ export default {
     },
 
     filtergenrediscs(filtergenre){
-      this.filterdiscs = this.discs.filter( element => element.genre.toLowerCase() === filtergenre);
-      console.log(this.filterdiscs);
+      console.log(filtergenre);
+      if(filtergenre === ''){
+        this.filterdiscs = this.discs;
+      } else {
+         this.filterdiscs = this.discs.filter( element => element.genre.toLowerCase() === filtergenre);
+        }
+      
     }
   },
 
